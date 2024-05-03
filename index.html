@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>苏州出勤地点</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+		padding: 0;
+		width: 1200px;
+  }
+  .header {
+    background-color: #003366; /* 自定义颜色 */
+    color: white;
+    padding: 20px;
+    position: relative;
+  }
+  .header h1 {
+    margin: 0;
+		text-align: center;
+    font-size: 2.2em;
+  }
+  .update-date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.3em;
+  }
+  .content-section {
+!--    width: 1280px;
+    margin: auto;
+		padding: 0 0 0 10px; /* 上、右、下、左 */
+  }
+  .content-section:nth-child(odd) {
+    background-color: #2e649b; 
+  }
+  .content-section:nth-child(even) {
+    background-color: #14497f; 
+  }
+  .section-header {
+    color: white;
+    padding: 0 0 0 30px; /* 上、右、下、左 */
+    font-size: 1.6em;
+  }
+  .item {
+    color: white;
+    padding: 8px 30px;
+		font-size: 1.6em;
+  }
+  .item span.dx {
+    color: #38f9d7; /* dx文字颜色 */
+  }
+	.item span.finale {
+    color: #ffae00; /* 旧框文字颜色 */
+  }
+	.item span.chunithm {
+    color: #fff368; /* 中二文字颜色 */
+  }
+	.item span.wacca {
+    color: #fd4571; /* wacca文字颜色 */
+  }
+	.item span.taiko {
+    color: #2ed5ff; /* 太鼓国行文字颜色 */
+  }
+	.item span.sdvx {
+    color: #ff8c47; /* sdvx文字颜色 */
+  }
+	.item span.drs {
+    color: #b753fd; /* drs文字颜色 */
+  }
+	.item span.wulifangxiu {
+    color: #bd87ff; /* 舞立方秀文字颜色 */
+  }
+  .item span.comingsoon {
+    color: #73ff4d; /* 特殊文字颜色 */		
+  }
+  .item span.station {
+    display: block;
+    font-size: 0.9em;
+    color: #a8edea; /* 特殊文字颜色 */		
+  }
+	.content-section .item:last-child {
+		margin-bottom: 25px; /* 只增加最后一个item与区域底部的距离 */
+	}
+  .content-section div {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  .footer {
+    background-color: #14497f; /* 底部的颜色 #42b2c0 #2e649b #14497f */
+    color: white;
+    padding: 10px 30px;
+
+  }
+  .group-qr {
+		display: flex; /* 使用flex布局 */
+		justify-content: left; /* 左对齐 */
+		flex-wrap: wrap; /* 允许换行 */
+  }
+	.group-qr div {
+		text-align: center; /* 文字居中 */
+		margin: 15px; /* 二维码间距 */
+	}	
+  .group-qr img {
+		height:250px; /* 图片高度，根据需要调整 */
+  }
+  .group-qr p {
+		margin: 5px 0; /* 调整文字与图片的间距 */
+		font-size: 1.3em;
+  }
+	.group-qr-title {
+		font-size: 1.5em;
+		text-align: center; /* 标题居中 */
+		margin-bottom: 20px; /* 与二维码区域的间距 */
+	}	
+	.group-qr-title-left {
+		font-size: 1.5em;
+		text-align: left; /* 标题左对齐 */
+		margin-left: 10px;
+		margin-bottom: 20px; /* 与二维码区域的间距 */
+	}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>苏州出勤地点</h1>
+  <div class="update-date">2024-05-02</div>
+</div>
+
+<!-- 姑苏区 -->
+<div class="content-section">
+  <div class="section-header"><h2>姑苏区</h2></div><br />
+	<div class="item">
+    姑苏区 观前街 风云再起观前店 → <span class="dx">dx</span> 6币 | <span class="finale">旧框</span> 3币3曲 | <span class="wacca">wacca</span> 6币 | <span class="taiko">太鼓国行</span> 15币<br />
+    <span class="station">【4号线 察院场 站，2号口或4号口】</span>
+  </div>
+	<br />
+	<div class="item">
+    姑苏区 观前街 三十六计 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 12币<br />
+    <span class="station">【4号线 察院场 站，2号口 / 1号线 临顿路 站，3号口】</span>
+  </div>
+	<br />
+  <div class="item">
+    姑苏区 劳动路 胥江天街 3F 天空之城 → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 4币<br />
+    <span class="station">【5号线 劳动路 站，6西南口 / 2号线 劳动路站，1东北口】</span>
+  </div>
+	<br />
+	<div class="item">
+    姑苏区 石路 天虹 9F 星悦蓝海欢乐园 → <span class="dx">dx</span> 3币<br />
+    <span class="station">【2号线 石路 站，5号口】</span>
+  </div>
+	<br />
+	<div class="item">
+    姑苏区 金地广场 3F 明日世界 → <span class="dx">dx</span> 6币<br />
+    <span class="station">【5号线 / 4号线 南门 站】</span>
+  </div>
+	<br />
+	<div class="item">
+    姑苏区 平江万达 3F 明日世界 → <span class="chunithm">中二</span>*2 <br />
+    <span class="station">【2号线 平泷路东 站，3号口】</span>
+  </div>	
+  <!-- 更多内容... -->
+</div>
+<!-- 园区 -->
+<div class="content-section">
+  <div class="section-header"><h2>园区</h2></div><br />
+	<div class="item">
+    园区 苏州中心 南区 6F 第一回合 → <span class="dx">dx</span> 会员6币/非会员8币 （北区币与南区币不通） <br />
+    <span class="station">【1号线 东方之门 站，6号口】</span>
+  </div>
+	<br />
+	<div class="item">
+    园区 苏州中心 北区 6F 第一回合 → <span class="dx">dx</span> 会员6币/非会员8币 | <span class="taiko">太鼓国行</span> 8/10币 | <span class="chunithm">中二</span>*2 6/8币 <br />
+    <span class="station">【1号线 东方之门 站，6号口】</span>
+  </div>
+	<br />
+	<div class="item">
+    园区 龙湖星湖天街 2F 天空之城 → <span class="dx">dx</span> 3币 <br />
+  </div>
+	<br />
+	<div class="item">
+    园区 星斓荟 路劲广场 2F 三十六计 → <span class="dx">dx</span> 6币 <br />
+  </div>
+	<br />
+	<div class="item">
+    园区 永旺梦乐城 2F 真快活 → <span class="comingsoon">========还没开=========</span> <br />
+    <span class="station">【1号线 钟南街 站，2号口】</span>
+  </div>
+</div>
+<!-- 吴中区 -->
+<div class="content-section">
+  <div class="section-header"><h2>吴中区</h2></div><br />
+	<div class="item">
+    吴中区 木渎影视城 兔子团都市乐园 → <span class="dx">dx</span>*2 6币 <br />
+    <span class="station">【1号线 木渎 站，5号口】</span>
+  </div>
+	<br />
+	<div class="item">
+    吴中区 长申购物广场 2F → <span class="sdvx">sdvx</span> 4币 | <span class="drs">drs</span> 4币 <br />
+    <span class="station">【2号线 郭苑路 站，3号口】</span>
+  </div>
+	<br />	
+	<div class="item">
+    吴中区 太湖中心MALL 3F 卡通尼乐园 → <span class="taiko">太鼓国行</span> 8币<br />
+  </div>
+	<br />	
+	<div class="item">
+    吴中区 金鑫大运城 3F 考拉王国 → <span class="wulifangxiu">舞立方秀（联网）</span> 3币 <br />
+    <span class="station">【5号线 大治桥 站，2东北口，距离1km左右】</span>
+  </div>
+</div>
+
+<!-- 虎丘区 -->
+<div class="content-section">
+  <div class="section-header"><h2>虎丘区</h2></div><br />
+	<div class="item">
+    虎丘区 永旺梦乐城 2F 真快活 → <span class="dx">dx</span>*2 6币<br />	
+    <span class="station">【3号线 苏州新区火车站 站，3东南口】</span>		
+  </div>
+	<br />	
+	<div class="item">
+    虎丘区 塔园路 狮山天街 4F 明日世界 → <span class="dx">dx</span> 6币 | <span class="chunithm">中二</span>*2 6币 <br />
+    <span class="station">【3号线 狮山路 站，5西北口】</span>		
+  </div>
+</div>
+<!-- 吴江区 -->
+<div class="content-section">
+  <div class="section-header"><h2>吴江区</h2></div><br />
+	<div class="item">
+    吴江区 万宝财富商业广场 2F 环游家族 → <span class="dx">dx</span> 会员4币/非会员5币<br />	
+    <span class="station">【4号线 吴江人民广场 站，2号东南口】</span>			
+  </div>
+	<br />	
+	<div class="item">
+    吴江区 万象汇 3F 星际传奇 → <span class="dx">dx</span> 3币<br />	
+    <span class="station">【4号线 苏州湾东 站，2号东南口】</span>			
+  </div>
+	<br />
+	<div class="item">
+    吴江区 爱琴海 3F 哈咪熊乐园 → <span class="wulifangxiu">舞立方秀（离线）</span> <br />	
+    <span class="station">【4号线 苏州湾东 站，1号西南口】</span>			
+  </div>
+</div>
+<!-- 相城区 -->
+<div class="content-section">
+  <div class="section-header"><h2>相城区</h2></div><br />
+	<div class="item">
+    相城区 大悦春风里 3F 汤姆熊欢乐世界 → <span class="dx">dx</span> 5币<br />	
+    <span class="station">【4号线 龙道浜 站，2号东南口】</span>			
+  </div>
+	<br />	
+	<div class="item">
+    相城区 高铁吾悦广场 2F 慢车道电玩 → <span class="wulifangxiu">舞立方秀（联网）</span> <br />	
+    <span class="station">【2号线 大湾 站，1号口】</span>			
+  </div>
+</div>
+<!-- 昆山 -->
+<div class="content-section">
+  <div class="section-header"><h2>昆山</h2></div><br />
+	<div class="item">
+    昆山 经开区万达广场 5F 星际梦想城 → <span class="dx">dx</span> 3币<br />		
+  </div>
+	<br />	
+	<div class="item">
+    昆山 万象汇 3F 星际传奇 → <span class="dx">dx</span> 5币<br />		
+  </div>
+	<br />	
+	<div class="item">
+    昆山 金鹰国际购物中心B座 5F 卡通尼乐园 → <span class="dx">dx</span> 5币<br />		
+  </div>
+</div>
+<!-- 常熟 -->
+<div class="content-section">
+  <div class="section-header"><h2>常熟</h2></div><br />
+	<div class="item">
+    常熟 琴湖溪里二期 引力矩阵 → <span class="dx">dx</span>*2 4币 | <span class="chunithm">中二</span>*2 4币 <br />
+  </div>
+	<br />	
+	<div class="item">
+    常熟 卡通尼苏州常熟永旺店 → <span class="dx">dx</span> 5币<br />		
+  </div>
+	<br />	
+	<div class="item">
+    常熟 方塔步行街 奈斯家庭娱乐中心（方塔街店） → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 6币 <br />
+  </div>
+	<br />	
+	<div class="item">
+    常熟 万达广场 2F 桂满园 → <span class="dx">dx</span> 5币 <br />
+  </div>
+</div>
+<!-- 太仓 -->
+<div class="content-section">
+  <div class="section-header"><h2>太仓</h2></div><br />
+	<div class="item">
+    太仓 39one's桌游推理馆（以前叫 白月光沉浸式剧本杀） → <span class="dx">dx</span> 5币 <br />
+  </div>
+	<br />	
+	<div class="item">
+    太仓 大玩家苏州太仓万达店 → <span class="dx">dx</span> 3币 <br />
+  </div>
+	<br />	
+	<div class="item">
+    太仓 华旭广场 2F 菠萝猫动漫城 → <span class="dx">dx</span> <br />
+  </div>
+</div>
+<!-- 张家港 -->
+<div class="content-section">
+  <div class="section-header"><h2>张家港</h2></div><br />
+	<div class="item">
+    张家港 金茂览秀城 星际传奇 → <span class="dx">dx</span> 3币 <br />
+  </div>
+	<br />
+	<div class="item">
+    张家港 萌多拉都市幻想 → <span class="dx">dx</span> 4币 <br />
+  </div>
+	<br />
+	<div class="item">
+    张家港 杨舍镇吾悦 NATAKIDS → <span class="dx">dx</span> 4币 <br />
+  </div>
+</div>
+<!-- 更多区域... -->
+
+<div class="footer">
+	<div class="group-qr-title">
+		<h2>群组二维码</h2>
+	</div>
+  <div class="group-qr">
+    <div>
+      <img src="images/苏州大群.jpg" alt="苏州大群">
+			<p>苏州大群</p>
+    </div>
+    <div>
+      <img src="images/二群.jpg" alt="二群">
+			<p>二群</p>
+    </div>
+    <div>
+      <img src="images/苏州舞萌纯群.jpg" alt="苏州舞萌纯群">
+			<p>苏州舞萌纯群</p>
+    </div>
+    <div>
+      <img src="images/中二.jpg" alt="中二">
+			<p>中二</p>
+    </div>
+    <div>
+      <img src="images/太鼓.jpg" alt="太鼓">
+			<p>太鼓</p>
+    </div>		
+    <!-- 更多二维码... -->
+  </div>
+	<br />
+	<div class="group-qr-title-left">
+		<h2>机厅群</h2>
+	</div>
+  <div class="group-qr">
+    <div>
+      <img src="images/兔熊印.jpg" alt="兔熊印">
+			<p>大悦 汤姆熊</p>
+    </div>
+    <div>
+      <img src="images/木渎兔子团.jpg" alt="木渎兔子团">
+			<p>木渎 兔子团</p>
+    </div>
+    <div>
+      <img src="images/狮山天街明日世界.jpg" alt="狮山天街明日世界">
+			<p>狮山天街 明日世界</p>
+    </div>
+    <div>
+      <img src="images/劳动路天空之城.jpg" alt="劳动路天空之城">
+			<p>劳动路 天空之城</p>
+    </div>
+    <div>
+      <img src="images/新区永旺真快活.jpg" alt="新区永旺真快活">
+			<p>新区永旺 真快活</p>
+    </div>	
+    <div>
+      <img src="images/吴江环游家族.jpg" alt="吴江环游家族">
+			<p>吴江 环游家族</p>
+    </div>
+    <div>
+      <img src="images/石路星悦蓝海.jpg" alt="石路星悦蓝海">
+			<p>石路 星悦蓝海</p>
+    </div>
+    <div>
+      <img src="images/南门明日世界.jpg" alt="南门明日世界">
+			<p>南门 明日世界</p>
+    </div>	
+    <div>
+      <img src="images/观前三十六计.jpg" alt="观前三十六计">
+			<p>观前 三十六计</p>
+    </div>
+    <div>
+      <img src="images/园区三十六计.jpg" alt="园区三十六计">
+			<p>园区 三十六计</p>
+    </div>		
+    <div>
+      <img src="images/平江万达明日世界.jpg" alt="平江万达明日世界">
+			<p>平江万达 明日世界</p>
+    </div>	
+    <!-- 更多二维码... -->
+  </div>
+	<div class="group-qr-title-left">
+		<h2>地区群</h2>
+	</div>
+  <div class="group-qr">
+    <div>
+      <img src="images/昆山.jpg" alt="昆山">
+			<p>昆山</p>
+    </div>
+    <div>
+      <img src="images/常熟.jpg" alt="常熟">
+			<p>常熟</p>
+    </div>
+    <div>
+      <img src="images/maimai.png" alt="迪拉熊">
+    </div>
+    <!-- 更多二维码... -->
+  </div>		
+</div>
+
+</body>
+</html>
