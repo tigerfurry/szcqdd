@@ -24,10 +24,16 @@
   }
   .update-date {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     font-size: 1.3em;
   }
+	.header-note {
+		position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1em;
+	}
   .content-section {
 !--    width: 1280px;
     margin: auto;
@@ -75,6 +81,9 @@
   }
   .item span.comingsoon {
     color: #73ff4d; /* 特殊文字颜色 */		
+  }
+	.item span.note {
+    color: #CA7384; /* 特殊文字颜色 */		
   }
   .item span.station {
     display: block;
@@ -128,19 +137,20 @@
 
 <div class="header">
   <h1>苏州出勤地点</h1>
-  <div class="update-date">2024-05-04</div>
+  <div class="update-date">2024-05-25</div>
+	<div class="header-note">注意：别跑空了<br />园区星斓荟三十六计的舞萌返厂维修后还没回来<br />平江万达明日世界消防寄了，没有开门</div>
 </div>
 
 <!-- 姑苏区 -->
 <div class="content-section">
   <div class="section-header"><h2>姑苏区</h2></div><br />
 	<div class="item">
-    姑苏区 观前街 风云再起观前店 → <span class="dx">dx</span> 6币 | <span class="finale">旧框</span> 3币3曲 | <span class="wacca">wacca</span> 6币 | <span class="taiko">太鼓国行</span> 15币<br />
+    姑苏区 观前街 风云再起观前店 → <span class="dx">dx</span> 6币 | <span class="finale">旧框</span> 3币3曲 | <span class="wacca">wacca</span>*2 6币 | <span class="taiko">太鼓国行</span> 9币3曲<br />
     <span class="station">【4号线 察院场 站，2号口或4号口】</span>
   </div>
 	<br />
 	<div class="item">
-    姑苏区 观前街 三十六计 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 12币<br />
+    姑苏区 观前街 三十六计 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 10币4曲<br />
     <span class="station">【4号线 察院场 站，2号口 / 1号线 临顿路 站，3号口】</span>
   </div>
 	<br />
@@ -160,7 +170,7 @@
   </div>
 	<br />
 	<div class="item">
-    姑苏区 平江万达 3F 明日世界 → <span class="chunithm">中二</span>*2 5币 <br />
+    姑苏区 平江万达 3F 明日世界 → <span class="chunithm">中二</span>*2 5币 <span class="note">【消防寄了，没开门】</span><br />
     <span class="station">【2号线 平泷路东 站，3号口】</span>
   </div>	
   <!-- 更多内容... -->
@@ -183,11 +193,11 @@
   </div>
 	<br />
 	<div class="item">
-    园区 星斓荟 路劲广场 2F 三十六计 → <span class="dx">dx</span> 6币 <br />
+    园区 星斓荟 路劲广场 2F 三十六计 → <span class="dx">dx</span> 6币 <span class="note">【dx返厂维修后还没回来】</span> <br />
   </div>
 	<br />
 	<div class="item">
-    园区 永旺梦乐城 2F 真快活 → <span class="comingsoon">========还没开=========</span> <br />
+    园区 永旺梦乐城 2F 真快活 → <span class="comingsoon">========还没开，预计6.1开业========= <br />
     <span class="station">【1号线 钟南街 站，2号口】</span>
   </div>
 </div>
@@ -209,7 +219,7 @@
   </div>
 	<br />	
 	<div class="item">
-    吴中区 金鑫大运城 3F 考拉王国 → <span class="wulifangxiu">舞立方秀（联网）</span> 3币 <br />
+    吴中区 金鑫大运城 3F 考拉王国 → <span class="wulifangxiu">舞立方秀</span> 3币 <br />
     <span class="station">【5号线 大治桥 站，2东北口，距离1km左右】</span>
   </div>
 </div>
@@ -241,7 +251,7 @@
   </div>
 	<br />
 	<div class="item">
-    吴江区 爱琴海 3F 哈咪熊乐园 → <span class="wulifangxiu">舞立方秀（离线）</span> <br />	
+    吴江区 爱琴海 3F 哈咪熊乐园 → <span class="wulifangxiu">舞立方秀</span> <br />	
     <span class="station">【4号线 苏州湾东 站，1号西南口】</span>			
   </div>
 </div>
@@ -254,7 +264,7 @@
   </div>
 	<br />	
 	<div class="item">
-    相城区 高铁吾悦广场 2F 慢车道电玩 → <span class="wulifangxiu">舞立方秀（联网）</span> <br />	
+    相城区 高铁吾悦广场 2F 慢车道电玩 → <span class="wulifangxiu">舞立方秀</span> <br />	
     <span class="station">【2号线 大湾 站，1号口】</span>			
   </div>
 </div>
@@ -262,7 +272,7 @@
 <div class="content-section">
   <div class="section-header"><h2>昆山</h2></div><br />
 	<div class="item">
-    昆山 经开区万达广场 5F 星际梦想城 → <span class="dx">dx</span> 3币<br />		
+    昆山 经开区万达广场 5F 星际梦想城 → <span class="dx">dx</span> 5币<br />		
   </div>
 	<br />	
 	<div class="item">
@@ -304,7 +314,7 @@
   </div>
 	<br />	
 	<div class="item">
-    太仓 华旭广场 2F 菠萝猫动漫城 → <span class="dx">dx</span> 4币 <br />
+    太仓 华旭广场 2F 菠萝猫动漫城 → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 4币 | <span class="taiko">太鼓国行</span> 6币 <br />
   </div>
 </div>
 <!-- 张家港 -->
