@@ -67,15 +67,15 @@
   }
 	.section-header img {
     padding: 10px 10px 0 0; /* 上、右、下、左 */
-		height: 120px; /* 调整图片高度 */
-	/*原始图片大小为941*1173，高度100px下大概宽度为80.22px，高度120px下大概宽度为96.27px*/
+		height: 100px; /* 调整图片高度 */
+	/*原始图片大小为941*1173，高度100px下大概宽度为80.22px*/
 		width: auto;	/*自适应宽度*/
   }
 	.section-header .qr-code.visible {
 		visibility: visible;
   }
 	.qr-code-caption {
-		width:96.27px;	/*原始图片大小为941*1173，高度100px下大概宽度为80.22px*/
+		width:80.22px;	/*原始图片大小为941*1173，高度100px下大概宽度为80.22px*/
 		padding-left: 0px;
 		font-size: 12px;
 		text-align: center;
@@ -99,16 +99,16 @@
 		visibility: hidden; /* 默认隐藏二维码 */
   }
 	.item img {
-		height: 120px;
-		width: 96.27px;  /*原始图片大小为941*1173，高度80px下大概宽度为64.18px，高度60px下大概宽度为48.13px*/
+		height: 60px;
+		width: 48.13px;  /*原始图片大小为941*1173，高度80px下大概宽度为64.18px，高度60px下大概宽度为48.13px*/
     padding: 0 0 0 0; /* 上、右、下、左 */
   }
 	.item .qr-code.visible {
 		visibility: visible;
   }
 	.item .qr-code-caption {
-		width: 0px;  /*文字单行竖向排列，只需要把宽度设置为刚好容纳一个字体的宽度即可*/
-		font-size: 14px;
+		width: 40px;  /*原始图片大小为941*1173，高度80px下大概宽度为64.18px，高度60px下大概宽度为48.13px*/
+		font-size: 10px;
 		text-align: left;
 		margin-top: 0px;               /* 设置二维码和文字之间的间距 */
 	}	
@@ -116,9 +116,6 @@
 	/* 文字部分 */
 	.item .text {
 		flex-grow: 1;                 
-	}
-	.text {
-		margin-top: 30px;
 	}
 
 
@@ -204,7 +201,7 @@
 
 <div class="header">
   <h1>苏州出勤地点</h1>
-  <div class="update-date">2025-01-02</div>
+  <div class="update-date">2024-12-29</div>
 	<div class="header-note"></div>
 </div>
 
@@ -239,8 +236,8 @@
   <div class="section-header"><h2>姑苏区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
 			<img src="images-remake/null.png" alt=""><br />
+			<div class="qr-code-caption"></div>
 		</div>
 		<div class="text">
 			姑苏区 观前街 风云再起观前店 → <span class="dx">dx</span> 6币 | <span class="finale">旧框</span> 3币3曲 | <span class="wacca">wacca</span>*2 3币 | <span class="taiko">太鼓国行</span>*2 9币3曲 <br />
@@ -250,9 +247,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">观前街</div>
 			<img src="images-remake/观前街.png" alt="观前街"><br />
-
+			<div class="qr-code-caption">观前街</div>
 		</div>
 		<div class="text">
 			姑苏区 观前街 三十六计 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 10币4曲<br />
@@ -262,8 +258,8 @@
 	<br />
   <div class="item">
 		<div class="qr-code.visible">
+			<img src="images-remake/胥江天街.png" alt="胥江天街"><br />
 			<div class="qr-code-caption">胥江天街</div>
-			<img src="images-remake/胥江天街.png" alt="胥江天街"><br />			
 		</div>
 		<div class="text">
 			姑苏区 劳动路 胥江天街 3F 天空之城 → <span class="dx">dx</span> 5币 | <span class="chunithm">中二</span>*2 5币<br />
@@ -273,8 +269,8 @@
 	<br />
   <div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">胥江天街</div>
 			<img src="images-remake/胥江天街.png" alt="胥江天街"><br />
+			<div class="qr-code-caption">胥江天街</div>
 		</div>
 		<div class="text">
 			姑苏区 劳动路 胥江天街 3F 童年搭档 → <span class="dx">dx</span> 3币？ <br />
@@ -284,8 +280,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">石路天虹</div>
 			<img src="images-remake/石路天虹.png" alt="石路天虹"><br />
+			<div class="qr-code-caption">石路天虹</div>
 		</div>
 		<div class="text">		
 			姑苏区 石路 天虹 9F 星悦蓝海欢乐园 → <span class="dx">dx</span> 3币<br />
@@ -295,8 +291,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">金地广场</div>
 			<img src="images-remake/金地广场.png" alt="金地广场"><br />
+			<div class="qr-code-caption">金地广场</div>
 		</div>
 		<div class="text">	
 			姑苏区 金地广场 3F 明日世界 → <span class="dx">dx</span> 6币<br />
@@ -312,8 +308,8 @@
   <div class="section-header"><h2>园区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
 			<img src="images-remake/null.png" alt=""><br />
+			<div class="qr-code-caption"></div>
 		</div>
 		<div class="text">	
 			园区 苏州中心 南区 6F 第一回合 → <span class="dx">dx</span> 会员6币/非会员8币 （北区币与南区币不通） <br />
@@ -323,8 +319,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
 			<img src="images-remake/null.png" alt=""><br />
+			<div class="qr-code-caption"></div>
 		</div>
 		<div class="text">	
 			园区 苏州中心 北区 6F 第一回合 → <span class="dx">dx</span> 会员6币/非会员8币 | <span class="taiko">太鼓国行</span> 6/8币 | <span class="chunithm">中二</span>*2 6/8币 <br />
@@ -334,8 +330,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">星湖天街</div>
 			<img src="images-remake/园区星湖天街.png" alt="园区星湖天街"><br />
+			<div class="qr-code-caption">星湖天街</div>
 		</div>
 		<div class="text">
 			园区 龙湖星湖天街 2F 天空之城 → <span class="dx">dx</span> 4币 <br />
@@ -344,8 +340,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">园区永旺</div>
 			<img src="images-remake/园区永旺梦乐城.png" alt="园区永旺梦乐城"><br />
+			<div class="qr-code-caption">园区永旺</div>
 		</div>
 		<div class="text">
 			园区 永旺梦乐城 2F 真快活 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 10币 <br />
@@ -360,8 +356,8 @@
   <div class="section-header"><h2>吴中区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">木渎影视城</div>
 			<img src="images-remake/木渎影视城.png" alt="木渎影视城"><br />
+			<div class="qr-code-caption">木渎影视城</div>
 		</div>
 		<div class="text">		
 			吴中区 木渎影视城 兔子团都市乐园 → <span class="dx">dx</span> 6币 <br />
@@ -371,8 +367,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt=""><br />		
+			<img src="images-remake/null.png" alt=""><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">			
 			吴中区 太湖中心MALL 3F 卡通尼乐园 → <span class="taiko">太鼓国行</span> 8币<br />
@@ -381,8 +377,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
 			<img src="images-remake/null.png" alt=""><br />
+			<div class="qr-code-caption"></div>
 		</div>
 		<div class="text">			
 			吴中区 金鑫大运城 3F 考拉王国 → <span class="wulifangxiu">舞立方秀</span> 3币 <br />
@@ -391,8 +387,8 @@
   </div>
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
 			<img src="images-remake/null.png" alt=""><br />
+			<div class="qr-code-caption"></div>
 		</div>
 		<div class="text">			
 			吴中区 龙湖东吴天街 3F 慢车道电玩 → <span class="wulifangxiu">舞立方秀</span> 5币 <br />
@@ -401,8 +397,8 @@
   </div>
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">吴中万达</div>		
-			<img src="images-remake/吴中万达.png" alt="吴中万达"><br />	
+			<img src="images-remake/吴中万达.png" alt="吴中万达"><br />
+			<div class="qr-code-caption">吴中万达</div>			
 		</div>
 		<div class="text">			
 			吴中区 万达广场 3F 兔子团电玩世界 → <span class="dx">dx</span> | <span class="chunithm">中二</span>*2 6币 <br />
@@ -411,8 +407,8 @@
   </div>
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">吴中永旺</div>	
-			<img src="images-remake/吴中永旺.png" alt="吴中永旺"><br />		
+			<img src="images-remake/吴中永旺.png" alt="吴中永旺"><br />
+			<div class="qr-code-caption">吴中永旺</div>			
 		</div>
 		<div class="text">	
 			吴中区 永旺梦乐城 3F 三十六计电玩城 → </span> <span class="dx">dx</span> 6币 | <span class="chunithm">中二</span> 6币 | <span class="taiko">太鼓国行</span> 15币 <br />
@@ -421,8 +417,8 @@
   </div>
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">尹山湖歌林</div>		
-			<img src="images-remake/尹山湖歌林公园.png" alt="尹山湖歌林公园"><br />	
+			<img src="images-remake/尹山湖歌林公园.png" alt="尹山湖歌林公园"><br />
+			<div class="qr-code-caption">尹山湖歌林</div>			
 		</div>
 		<div class="text">
 			吴中区 尹山湖歌林公园 2F 三十六计电玩城 → </span> <span class="dx">dx</span> 5币 <br />
@@ -437,8 +433,8 @@
   <div class="section-header"><h2>虎丘区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">新区永旺</div>		
-			<img src="images-remake/新区永旺梦乐城.png" alt="新区永旺梦乐城"><br />	
+			<img src="images-remake/新区永旺梦乐城.png" alt="新区永旺梦乐城"><br />
+			<div class="qr-code-caption">新区永旺</div>			
 		</div>
 		<div class="text">	
 			虎丘区 永旺梦乐城 2F 真快活 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 10币<br />	
@@ -448,8 +444,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">狮山天街</div>	
-			<img src="images-remake/狮山天街.png" alt="狮山天街"><br />		
+			<img src="images-remake/狮山天街.png" alt="狮山天街"><br />
+			<div class="qr-code-caption">狮山天街</div>			
 		</div>
 		<div class="text">			
 			虎丘区 塔园路 狮山天街 4F 明日世界 → <span class="dx">dx</span> 6币 | <span class="chunithm">中二</span>*2 6币 <br />
@@ -459,8 +455,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>		
 			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>		
 		</div>
 		<div class="text">		
 			虎丘区 绿宝广场 3F 汤姆熊欢乐世界 → <span class="taiko">太鼓国行</span> 单人5币/双人8币 <br />
@@ -475,8 +471,8 @@
   <div class="section-header"><h2>吴江区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">吴江万宝</div>		
 			<img src="images-remake/吴江区万宝财富商业广场.png" alt="吴江区万宝财富商业广场"><br />
+			<div class="qr-code-caption">吴江万宝</div>			
 		</div>
 		<div class="text">			
 			吴江区 万宝财富商业广场 2F 环游家族 → <span class="dx">dx</span> 会员4币/非会员5币<br />	
@@ -486,8 +482,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>		
-			<img src="images-remake/null.png" alt="null"><br />	
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			吴江区 万象汇 3F 星际传奇 → <span class="dx">dx</span> 3币<br />	
@@ -497,8 +493,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />	
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>		
 		</div>
 		<div class="text">	
 			吴江区 爱琴海 3F 哈咪熊乐园 → <span class="wulifangxiu">舞立方秀</span> <br />	
@@ -508,8 +504,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>		
-			<img src="images-remake/null.png" alt="null"><br />	
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			吴江区 吾悦广场 2F 萌宝熊 → <span class="wulifangxiu">舞立方秀</span> <br />	
@@ -519,8 +515,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>		
-			<img src="images-remake/null.png" alt="null"><br />	
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">			
 			吴江区 盛泽镇 碧桂园凤凰荟购物中心 2F 怪兽家庭娱乐中心 → <span class="dx">dx</span> | <span class="taiko">太鼓国行</span> 6币 <br />			
@@ -529,8 +525,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>		
 		</div>
 		<div class="text">		
 			吴江区 盛泽镇 天虹购物中心 2F 星城战记 → <span class="dx">dx</span> 5币 | <span class="chunithm">中二</span>*2 5币 <br />			
@@ -544,8 +540,8 @@
   <div class="section-header"><h2>相城区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">相城大悦</div>
-			<img src="images-remake/相城区苏州大悦城.png" alt="相城区苏州大悦城"><br />			
+			<img src="images-remake/相城区苏州大悦城.png" alt="相城区苏州大悦城"><br />
+			<div class="qr-code-caption">相城大悦</div>			
 		</div>	
 		<div class="text">		
 			相城区 苏州大悦城 3F 汤姆熊欢乐世界 → <span class="dx">dx</span> 4币 | <span class="taiko">太鼓国行</span> 单人5币/双人8币 <br />	
@@ -555,8 +551,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />			
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>				
 		</div>
 		<div class="text">			
 			相城区 高铁吾悦广场 2F 慢车道电玩 → <span class="wulifangxiu">舞立方秀</span> <br />	
@@ -566,8 +562,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">相城天街</div>		
-			<img src="images-remake/相城区龙湖天街.png" alt="相城区龙湖天街"><br />	
+			<img src="images-remake/相城区龙湖天街.png" alt="相城区龙湖天街"><br />
+			<div class="qr-code-caption">相城天街</div>			
 		</div>
 		<div class="text">		
 			相城区 龙湖天街 3F 乐维尼超乐场 → <span class="dx">dx</span>*2 5币 <br />	
@@ -577,8 +573,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">相城天街</div>			
 			<img src="images-remake/相城区龙湖天街.png" alt="相城区龙湖天街"><br />
+			<div class="qr-code-caption">相城天街</div>			
 		</div>
 		<div class="text">			
 			相城区 龙湖天街 4F 自游星空超级游乐汇 → <span class="dx">dx</span> 5币 | <span class="wulifangxiu">舞立方秀</span> <br />	
@@ -588,8 +584,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			相城区 复悦荟 2F 奇米尔电玩娱乐城 → <span class="dx">dx</span> 5币 <br />	
@@ -609,17 +605,17 @@
 		</div>	
 		<div class="qr-code.visible">
 			<img src="images-remake/昆山太鼓.png" alt="昆山太鼓"><br />
-			<div class="qr-code-caption">昆山太鼓</div>			
+			<div class="qr-code-caption">昆山太鼓</div>
 		</div>
 		<div class="qr-code.visible">
-     <img src="images-remake/昆山中二.png" alt="昆山中二"><br />
-			<div class="qr-code-caption">昆山中二</div> 		 
+      <img src="images-remake/昆山中二.png" alt="昆山中二"><br />
+			<div class="qr-code-caption">昆山中二</div>
     </div>
 	</div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">昆山中二</div>	
-			<img src="images-remake/昆山中二.png" alt="昆山经开区万达广场"><br />		
+			<img src="images-remake/昆山中二.png" alt="昆山经开区万达广场"><br />
+			<div class="qr-code-caption">昆山中二</div>			
 		</div>
 		<div class="text">		
 			昆山 经开区万达广场 5F 星际梦想城 → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 4币 <br />
@@ -628,8 +624,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			昆山 万象汇 3F 星际传奇 → <span class="dx">dx</span> 5币 | <span class="taiko">太鼓国行</span>*2 8币 <br />	
@@ -639,8 +635,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			昆山 金鹰国际购物中心B座 5F 卡通尼乐园 → <span class="dx">dx</span> 5币 | <span class="taiko">太鼓国行</span> 5币 <br />
@@ -650,8 +646,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
-			<img src="images-remake/null.png" alt="null"><br />				
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>				
 		</div>
 		<div class="text">		
 			昆山 景王东路 阅荟商业广场 3F 全球玩家电玩城 → <span class="dx">dx</span> 5币 <br />		
@@ -661,8 +657,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
-			<img src="images-remake/null.png" alt="null"><br />			
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>	
 		<div class="text">			
 			昆山 吾悦广场 2F 天空之城 → <span class="dx">dx</span> 5币 <br />	
@@ -671,8 +667,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />			
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>				
 		</div>
 		<div class="text">		
 			昆山 花桥中骏世界城 卡通尼乐园 → <span class="taiko">太鼓国行</span> 5币 <br />			
@@ -694,8 +690,8 @@
 	</div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>		
-			<img src="images-remake/null.png" alt="null"><br />	
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			常熟 琴湖溪里二期 引力矩阵 → <span class="dx">dx</span>*2 4币 | <span class="chunithm">中二</span>*2 4币 <br />
@@ -704,8 +700,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />	
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>		
 		</div>
 		<div class="text">		
 			常熟 卡通尼苏州常熟永旺店 → <span class="dx">dx</span> 5币 | <span class="taiko">太鼓国行</span> 5币 <br />		
@@ -714,8 +710,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			常熟 方塔步行街 奈斯家庭娱乐中心（方塔街店） → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 6币 <br />
@@ -724,8 +720,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
-			<img src="images-remake/null.png" alt="null"><br />			
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			常熟 万达广场 2F 桂满园 → <span class="dx">dx</span> 5币 <br />
@@ -734,8 +730,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			常熟 印象城 3F 菲游乐 → <span class="sdvx">sdvx</span>*2 3币 <br />
@@ -757,8 +753,8 @@
 	</div><br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">		
 			太仓 大玩家苏州太仓万达店 → <span class="dx">dx</span> 3币 <br />
@@ -767,8 +763,8 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">			
 			太仓 华旭广场 2F 菠萝猫动漫城 → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 4币 | <span class="taiko">太鼓国行</span> 6币 <br />
@@ -789,8 +785,8 @@
 	</div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
-			<img src="images-remake/null.png" alt="null"><br />			
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">			
 			张家港 金茂览秀城 星际传奇 → <span class="dx">dx</span> 4币 <br />
@@ -799,8 +795,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">
 			张家港 萌多拉都市幻想 → <span class="dx">dx</span> 4币 <br />
@@ -809,8 +805,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />			
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>				
 		</div>
 		<div class="text">
 			张家港 吾悦广场 NATAKIDS → <span class="dx">dx</span> 4币 <br />
@@ -819,8 +815,8 @@
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>	
-			<img src="images-remake/null.png" alt="null"><br />		
+			<img src="images-remake/null.png" alt="null"><br />
+			<div class="qr-code-caption"></div>			
 		</div>
 		<div class="text">
 			张家港 吾悦广场 2F 城市英雄 → <span class="dx">dx</span> 5币 | <span class="taiko">太鼓国行</span> 8币 <br />
