@@ -5,206 +5,203 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>苏州出勤地点</title>
 <style>
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-		padding: 0;
-		width: 1200px;
-  }
-  .header {
-    background-color: #003366; /* 自定义颜色 */
-    color: white;
-    padding: 20px;
-    position: relative;
-  }
-  .header h1 {
-    margin: 0;
-		text-align: center;
-    font-size: 2.2em;
-  }
-  .update-date {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.3em;
-  }
-	.header-note {
-		position: absolute;
-    top: 0px;
-    left: 20px;
-    font-size: 1em;
-	}
-  .content-section {
-!--    width: 1280px;
-    margin: auto;
-		padding: 0 0 0 0px; /* 上、右、下、左 */
-  }
-  .content-section:nth-child(odd) {
-    background-color: #2e649b; 
-  }
-  .content-section:nth-child(even) {
-    background-color: #14497f; 
-  }
-  .section-header {
-		display: flex; /* 使用flexbox来控制布局 */
-		justify-content: space-between;
-		align-items: center; /* 垂直居中对齐 */
-    padding: 0 0 0 30px; /* 上、右、下、左 */
-    color: white;
-    font-size: 1.6em;
-		border-bottom: 1px solid; width: 100%; border-color: #CCFFFF;
-  }
-	.section-header h2 {
-		display: inline-block;
-		margin-right: 30px;
-		margin-left: 0px;
-	}
-	.section-header .qr-code {
-		display: flex; 
-		flex-direction: column;
-		align-items: center;
-		visibility: hidden; /* 默认隐藏二维码 */
-  }
-	.section-header img {
-    padding: 10px 10px 0 0; /* 上、右、下、左 */
-		height: 120px; /* 调整图片高度 */
-	/*原始图片大小为941*1173，高度100px下大概宽度为80.22px，高度120px下大概宽度为96.27px*/
-		width: auto;	/*自适应宽度*/
-  }
-	.section-header .qr-code.visible {
-		visibility: visible;
-  }
-	.qr-code-caption {
-		width:96.27px;	/*原始图片大小为941*1173，高度100px下大概宽度为80.22px*/
-		padding-left: 0px;
-		font-size: 12px;
-		text-align: center;
-		margin-top: 0px; /* 设置二维码和文字之间的间距 */
-  }
-  .item {
-		display: flex;  /* 使用flexbox来排列二维码和文字 */
-		align-items: center;  /* 垂直居中对齐 */
-    color: white;
-    padding: 8px 30px;
-		font-size: 1.6em;
-		border-bottom: 1px solid; width: 100%; border-color: #CCFFFF;
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	width: 1200px;
+}
+.header {
+	background-color: #003366; /* 自定义颜色 */
+	color: white;
+	padding: 20px;
+	position: relative;
+}
+.header h1 {
+	margin: 0;
+	text-align: center;
+	font-size: 2.2em;
+}
+.update-date {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 1.3em;
+}
+.header-note {
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	font-size: 1em;
+}
+.content-section {
+!-- width: 1280px;
+	margin: auto;
+	padding: 0 0 0 0px; /* 上、右、下、左 */
+}
+.content-section:nth-child(odd) {
+	background-color: #2e649b; 
+}
+.content-section:nth-child(even) {
+	background-color: #14497f; 
+}
+.section-header {
+	display: flex; /* 使用flexbox来控制布局 */
+	justify-content: space-between;
+	align-items: center; /* 垂直居中对齐 */
+	padding: 0 0 0 30px; /* 上、右、下、左 */
+	color: white;
+	font-size: 1.6em;
+	border-bottom: 1px solid; width: 100%; border-color: #CCFFFF;
+}
+.section-header h2 {
+	display: inline-block;
+	margin-right: 30px;
+	margin-left: 0px;
+}
+.section-header .qr-code {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	visibility: hidden; /* 默认隐藏二维码 */
+}
+.section-header img {
+	padding: 10px 10px 0 0; /* 上、右、下、左 */
+	height: 120px; /* 调整图片高度 */
+/*原始图片大小为941*1173，高度100px下大概宽度为80.22px，高度120px下大概宽度为96.27px*/
+	width: auto;	/*自适应宽度*/
+}
+.section-header .qr-code.visible {
+	visibility: visible;
+}
+.qr-code-caption {
+	width:96.27px;	/*原始图片大小为941*1173，高度100px下大概宽度为80.22px*/
+	padding-left: 0px;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 0px; /* 设置二维码和文字之间的间距 */
+}
+.item {
+	display: flex;  /* 使用flexbox来排列二维码和文字 */
+	align-items: center;  /* 垂直居中对齐 */
+	color: white;
+	padding: 8px 30px;
+	font-size: 1.6em;
+	border-bottom: 1px solid; width: 100%; border-color: #CCFFFF;
 
-  }
-	.item .qr-code {
-		display: flex; 
-		flex-direction: column; /* 让二维码和说明文字垂直排列 */
-		align-items: center;
-		justify-content: center; /* 保证二维码垂直居中 */
-		height: 100%;  /* 保证二维码区域和文字内容的高度一致 */
-		visibility: hidden; /* 默认隐藏二维码 */
-  }
-	.item img {
-		height: 120px;
-		width: 96.27px;  /*原始图片大小为941*1173，高度80px下大概宽度为64.18px，高度60px下大概宽度为48.13px*/
-    padding: 0 0 0 0; /* 上、右、下、左 */
-  }
-	.item .qr-code.visible {
-		visibility: visible;
-  }
-	.item .qr-code-caption {
-		width: 0px;  /*文字单行竖向排列，只需要把宽度设置为刚好容纳一个字体的宽度即可*/
-		font-size: 14px;
-		text-align: left;
-		margin-top: 0px;               /* 设置二维码和文字之间的间距 */
-	}	
+}
+.item .qr-code {
+	display: flex; 
+	flex-direction: column; /* 让二维码和说明文字垂直排列 */
+	align-items: center;
+	justify-content: center; /* 保证二维码垂直居中 */
+	height: 100%;  /* 保证二维码区域和文字内容的高度一致 */
+	visibility: hidden; /* 默认隐藏二维码 */
+}
+.item img {
+	height: 120px;
+	width: 96.27px;  /*原始图片大小为941*1173，高度80px下大概宽度为64.18px，高度60px下大概宽度为48.13px*/
+	padding: 0 0 0 0; /* 上、右、下、左 */
+}
+.item .qr-code.visible {
+	visibility: visible;
+}
+.item .qr-code-caption {
+	width: 0px;  /*文字单行竖向排列，只需要把宽度设置为刚好容纳一个字体的宽度即可*/
+	font-size: 14px;
+	text-align: left;
+	margin-top: 0px;               /* 设置二维码和文字之间的间距 */
+}	
 	
-	/* 文字部分 */
-	.item .text {
-		flex-grow: 1;                 
-	}
-	.text {
-		margin-top: 30px;
-	}
-
-
-  .item span.dx {
-    color: #38f9d7; /* dx文字颜色 */
-  }
-	.item span.finale {
-    color: #ffae00; /* 旧框文字颜色 */
-  }
-	.item span.chunithm {
-    color: #fff368; /* 中二文字颜色 */
-  }
-	.item span.wacca {
-    color: #fd4571; /* wacca文字颜色 */
-  }
-	.item span.taiko {
-    color: #2ed5ff; /* 太鼓国行文字颜色 */
-  }
-	.item span.sdvx {
-    color: #ff8c47; /* sdvx文字颜色 */
-  }
-	.item span.drs {
-    color: #b753fd; /* drs文字颜色 */
-  }
-	.item span.wulifangxiu {
-    color: #bd87ff; /* 舞立方秀文字颜色 */
-  }
-  .item span.comingsoon {
-    color: #73ff4d; /* 特殊文字颜色 */		
-  }
-	.item span.note {
-    color: #CA7384; /* 特殊文字颜色 */		
-  }
-  .item span.station {
-    display: block;
-    font-size: 0.9em;
-    color: #a8edea; /* 特殊文字颜色 */		
-  }
-	.content-section .item:last-child {
-		margin-bottom: 0px; /* 只增加最后一个item与区域底部的距离 */
-	}
-  .content-section div {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px;
-  }
-  .footer {
-    background-color: #14497f; /* 底部的颜色 #42b2c0 #2e649b #14497f */
-    color: white;
-    padding: 10px 30px;
-
-  }
-  .group-qr {
-		display: flex; /* 使用flex布局 */
-		justify-content: left; /* 左对齐 */
-		flex-wrap: wrap; /* 允许换行 */
-  }
-	.group-qr div {
-		text-align: center; /* 文字居中 */
-		margin: 15px; /* 二维码间距 */
-	}	
-  .group-qr img {
-		height:250px; /* 图片高度，根据需要调整 */
-  }
-  .group-qr p {
-		margin: 5px 0; /* 调整文字与图片的间距 */
-		font-size: 1.3em;
-  }
-	.group-qr-title {
-		font-size: 1.5em;
-		text-align: center; /* 标题居中 */
-		margin-bottom: 20px; /* 与二维码区域的间距 */
-	}	
-	.group-qr-title-left {
-		font-size: 1.5em;
-		text-align: left; /* 标题左对齐 */
-		margin-left: 10px;
-		margin-bottom: 20px; /* 与二维码区域的间距 */
-	}
+/* 文字部分 */
+.item .text {
+	flex-grow: 1;                 
+}
+.text {
+	margin-top: 30px;
+}
+.item span.dx {
+	color: #38f9d7; /* dx文字颜色 */
+}
+.item span.finale {
+	color: #ffae00; /* 旧框文字颜色 */
+}
+.item span.chunithm {
+	color: #fff368; /* 中二文字颜色 */
+}
+.item span.wacca {
+	color: #fd4571; /* wacca文字颜色 */
+}
+.item span.taiko {
+	color: #2ed5ff; /* 太鼓国行文字颜色 */
+}
+.item span.sdvx {
+	color: #ff8c47; /* sdvx文字颜色 */
+}
+.item span.drs {
+	color: #b753fd; /* drs文字颜色 */
+}
+.item span.wulifangxiu {
+	color: #bd87ff; /* 舞立方秀文字颜色 */
+}
+.item span.comingsoon {
+	color: #73ff4d; /* 特殊文字颜色 */		
+}
+.item span.note {
+	color: #CA7384; /* 特殊文字颜色 */		
+}
+.item span.station {
+	display: block;
+	font-size: 0.9em;
+	color: #a8edea; /* 特殊文字颜色 */		
+}
+.content-section .item:last-child {
+	margin-bottom: 0px; /* 只增加最后一个item与区域底部的距离 */
+}
+.content-section div {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+.footer {
+	background-color: #14497f; /* 底部的颜色 #42b2c0 #2e649b #14497f */
+	color: white;
+	padding: 10px 30px;
+}
+.group-qr {
+	display: flex; /* 使用flex布局 */
+	justify-content: left; /* 左对齐 */
+	flex-wrap: wrap; /* 允许换行 */
+}
+.group-qr div {
+	text-align: center; /* 文字居中 */
+	margin: 15px; /* 二维码间距 */
+}	
+.group-qr img {
+	height:250px; /* 图片高度，根据需要调整 */
+}
+.group-qr p {
+	margin: 5px 0; /* 调整文字与图片的间距 */
+	font-size: 1.3em;
+}
+.group-qr-title {
+	font-size: 1.5em;
+	text-align: center; /* 标题居中 */
+	margin-bottom: 20px; /* 与二维码区域的间距 */
+}	
+.group-qr-title-left {
+	font-size: 1.5em;
+	text-align: left; /* 标题左对齐 */
+	margin-left: 10px;
+	margin-bottom: 20px; /* 与二维码区域的间距 */
+}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>苏州出勤地点</h1>
-  <div class="update-date">2025-08-19</div>
+	<h1>苏州出勤地点</h1>
+	<div class="update-date">2025-08-26</div>
 	<div class="header-note"></div>
 </div>
 
@@ -212,7 +209,7 @@
 <div class="content-section">
 	<div class="section-header">
 		<h2>苏州大群群组</h2>
-    <!-- 二维码区域并排显示在标题右侧 -->
+    	<!-- 二维码区域并排显示在标题右侧 -->
 		<div class="qr-code.visible">
 			<img src="images-remake/大群.png" alt="大群"><br />
 			<div class="qr-code-caption">大群</div>
@@ -222,13 +219,13 @@
 			<div class="qr-code-caption">二群</div>
 		</div>
 		<div class="qr-code.visible">
-      <img src="images-remake/中二.png" alt="中二"><br />
+			<img src="images-remake/中二.png" alt="中二"><br />
 			<div class="qr-code-caption">中二</div>
-    </div>
+		</div>
 		<div class="qr-code.visible">
-      <img src="images-remake/太鼓.png" alt="太鼓"><br />
+			<img src="images-remake/太鼓.png" alt="太鼓"><br />
 			<div class="qr-code-caption">太鼓</div>
-    </div>
+		</div>
 	</div>
 	<br />
 </div>	
@@ -236,7 +233,7 @@
 
 <!-- 姑苏区 -->
 <div class="content-section">
-  <div class="section-header"><h2>姑苏区</h2></div><br />
+	<div class="section-header"><h2>姑苏区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
 			<div class="qr-code-caption">大群</div>
@@ -245,7 +242,7 @@
 		<div class="text">
 			姑苏区 观前街 风云再起观前店 → <span class="dx">dx</span>*3 6币 | <span class="finale">maimai旧框</span> 3币 | <span class="taiko">太鼓国行</span>*2 9币3曲 <br />
 			<span class="station">【4号线 察院场 站，2号口 / 1号线 临顿路 站，悬临通道2号口 / 6号线 悬桥巷 站，悬临通道2号口】</span>
-	  </div>	
+		</div>	
 	</div>
 	<br />
 	<div class="item">
@@ -275,7 +272,7 @@
 
 <!-- 园区 -->
 <div class="content-section">
-  <div class="section-header"><h2>园区</h2></div><br />
+	<div class="section-header"><h2>园区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
 			<div class="qr-code-caption"></div>
@@ -293,7 +290,7 @@
 			<img src="images-remake/null.png" alt=""><br />
 		</div>
 		<div class="text">	
-			园区 苏州中心 北区 6F 第一回合 → <span class="dx">dx</span> 会员/非会员 8/10币 | <span class="taiko">太鼓国行</span> 8/10币 | <span class="chunithm">中二</span>*2 8/10币 <br />
+			园区 苏州中心 北区 6F 第一回合 → <span class="dx">dx</span> 会员/非会员 8/10币 | <span class="taiko">太鼓国行</span> 15/18 | <span class="chunithm">中二</span>*2 8/10币 <br />
 			<span class="station">【1号线或3号线 东方之门 站，6号口】</span>
 		</div>
 	</div>
@@ -333,7 +330,7 @@
 
 <!-- 吴中区 -->
 <div class="content-section">
-  <div class="section-header"><h2>吴中区</h2></div><br />
+	<div class="section-header"><h2>吴中区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
 			<div class="qr-code-caption">木渎影视城</div>
@@ -347,13 +344,17 @@
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">吴中万达</div>		
-			<img src="images-remake/吴中万达.png" alt="吴中万达"><br />	
+			<div class="qr-code-caption">吴中万达舞萌</div>		
+			<img src="images-remake/吴中万达舞萌.png" alt="吴中万达舞萌"><br />	
 		</div>
 		<div class="text">			
 			吴中区 万达广场 3F 兔子团电玩世界 → <span class="dx">dx</span> 6币 | <span class="chunithm">中二</span>*2 6币 <br />
 			<span class="station">【2号线 新家桥 站，1号口出来 步行1km左右】</span>
-		</div>			
+		</div>	
+		<div class="qr-code.visible">
+			<div class="qr-code-caption">吴中万达中二</div>		
+			<img src="images-remake/吴中万达中二.png" alt="吴中万达中二"><br />	
+		</div>		
 	</div>
 	<br />	
 	<div class="item">
@@ -373,7 +374,7 @@
 			<img src="images-remake/尹山湖歌林公园.png" alt="尹山湖歌林公园"><br />	
 		</div>
 		<div class="text">
-			吴中区 尹山湖歌林公园 2F 三十六计电玩城 → </span> <span class="dx">dx</span> 5币 <br />
+			吴中区 尹山湖歌林公园 2F 三十六计电玩城 → </span> <span class="dx">dx</span> 6币 <br />
 			<span class="station">【2号线 独墅湖南 地铁站，1号口】</span>
 		</div>
 	</div>	
@@ -384,7 +385,7 @@
 			<img src="images-remake/吴中海星广场.png" alt=""><br />
 		</div>
 		<div class="text">			
-			吴中区 海星生活广场 玖号玩家 → <span class="dx">dx</span> <br />
+			吴中区 海星生活广场 玖号玩家 → <span class="dx">dx</span> 8币 <br />
 			<span class="station">【2号线 / 4号线 石湖东路 站，5东北口】</span>
 		</div>			
 	</div>
@@ -420,14 +421,12 @@
 			<span class="station">【5号线 大治桥 站，2东北口，距离1km左右】</span>
 		</div>
 	</div>
-
-
 </div>
 
 
 <!-- 虎丘区 -->
 <div class="content-section">
-  <div class="section-header"><h2>虎丘区</h2></div><br />
+	<div class="section-header"><h2>虎丘区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
 			<div class="qr-code-caption">新区永旺</div>		
@@ -476,7 +475,7 @@
 
 <!-- 吴江区 -->
 <div class="content-section">
-  <div class="section-header"><h2>吴江区</h2></div><br />
+	<div class="section-header"><h2>吴江区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
 			<div class="qr-code-caption">吴江万宝</div>		
@@ -556,7 +555,7 @@
 
 <!-- 相城区 -->
 <div class="content-section">
-  <div class="section-header"><h2>相城区</h2></div><br />
+	<div class="section-header"><h2>相城区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
 			<div class="qr-code-caption">相城大悦</div>
@@ -744,7 +743,7 @@
 			<img src="images-remake/昆山青阳万达.png" alt="昆山青阳万达"><br />				
 		</div>
 		<div class="text">		
-			昆山 青阳万达 3F 星河奇迹 → <span class="dx">dx</span>*2 4币 <br />			
+			昆山 青阳万达 3F 星河奇迹 → <span class="dx">dx</span>*2 3币 <br />			
 		</div>			
 	</div>
 	<br />
@@ -763,9 +762,9 @@
 
 <!-- 常熟 -->
 <div class="content-section">
-  <div class="section-header">
+	<div class="section-header">
 		<h2>常熟</h2>
-    <!-- 二维码区域并排显示在标题右侧 -->
+    	<!-- 二维码区域并排显示在标题右侧 -->
 		<div class="qr-code.visible">
 			<img src="images-remake/常熟.png" alt="常熟"><br />
 			<div class="qr-code-caption">常熟</div>
@@ -789,7 +788,7 @@
 		<div class="text">		
 			常熟 琴湖溪里二期 引力矩阵 → <span class="dx">dx</span>*2 4币 | <span class="chunithm">中二</span>*2 4币 <br />
 		</div>
-  </div>
+	</div>
 	<br />		
 	<div class="item">
 		<div class="qr-code.visible">
@@ -799,7 +798,7 @@
 		<div class="text">		
 			常熟 方塔步行街 奈斯家庭娱乐中心（方塔街店） → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 6币 <br />
 		</div>
-  </div>
+	</div>
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
@@ -809,7 +808,7 @@
 		<div class="text">		
 			常熟 万达广场 2F 桂满园 → <span class="dx">dx</span> 5币 <br />
 		</div>
-  </div>
+	</div>
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
@@ -817,9 +816,9 @@
 			<img src="images-remake/null.png" alt="null"><br />		
 		</div>
 		<div class="text">		
-			常熟 印象城 3F 菲游乐 → <span class="dx">dx</span> 3币 | <span class="sdvx">sdvx</span>*2 3币 <br />
+			常熟 印象城 3F 菲游乐 → <span class="dx">dx</span> 3币 <br />
 		</div>
-  </div>
+	</div>
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
@@ -829,20 +828,24 @@
 		<div class="text">		
 			常熟 昆承湖丰茂里 3F 酷乐空间 → <span class="dx">dx</span> 3币 <br />
 		</div>
-  </div>	
+	</div>	
 </div>
 
 
 <!-- 太仓 -->
 <div class="content-section">
-  <div class="section-header">
+	<div class="section-header">
 		<h2>太仓</h2>
-    <!-- 二维码区域并排显示在标题右侧 -->
+    	<!-- 二维码区域并排显示在标题右侧 -->
 		<div class="qr-code.visible">
 			<!-- <img src="images-remake/null.png" alt="null"><br />	-->	
 			<!-- <div class="qr-code-caption">太仓</div>	-->	
-			<br /><p>qq群 910373680</p>
+			<br /><p>太仓舞萌q群 910373680</p>
 		</div>	
+		<div class="qr-code.visible">
+			<img src="images-remake/太仓太鼓.png" alt="太仓太鼓"><br />
+			<div class="qr-code-caption">太仓太鼓</div>
+		</div>
 	</div><br />	
 	<div class="item">
 		<div class="qr-code.visible">
@@ -862,8 +865,7 @@
 		<div class="text">		
 			太仓 上海东路 万达广场 2F 宝贝王 → <span class="dx">dx</span> 4币 <br />
 		</div>
-	</div>  
-<!-- 
+	</div>   
 	<br />	
 	<div class="item">
 		<div class="qr-code.visible">
@@ -873,16 +875,15 @@
 		<div class="text">			
 			太仓 华旭广场 2F 菠萝猫动漫城 → <span class="dx">dx</span> 4币 | <span class="chunithm">中二</span>*2 4币 | <span class="taiko">太鼓国行</span> 6币 <br />
 		</div>
-  </div>
--->
+	</div>
 </div>
 
 
 <!-- 张家港 -->
 <div class="content-section">
-  <div class="section-header">
+	<div class="section-header">
 		<h2>张家港</h2>
-    <!-- 二维码区域并排显示在标题右侧 -->
+    	<!-- 二维码区域并排显示在标题右侧 -->
 		<div class="qr-code.visible">
 			<img src="images-remake/张家港.png" alt="张家港"><br />
 			<div class="qr-code-caption">张家港</div>
@@ -896,7 +897,7 @@
 		<div class="text">
 			张家港 吾悦广场 NATAKIDS → <span class="dx">dx</span> 4币 <br />
 		</div>
-  </div>
+	</div>
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
@@ -906,7 +907,7 @@
 		<div class="text">
 			张家港 萌多拉都市幻想 → <span class="dx">dx</span> 4币 <br />
 		</div>
-  </div>
+	</div>
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
@@ -914,9 +915,9 @@
 			<img src="images-remake/null.png" alt="null"><br />			
 		</div>
 		<div class="text">			
-			张家港 金茂览秀城 星际传奇 → <span class="dx">dx</span> 4币 <br />
+			张家港 金茂览秀城 星际传奇 → <span class="dx">dx</span> 4币 | <span class="taiko">太鼓国行</span> 17币 <br />
 		</div>
-  </div>
+	</div>
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
@@ -924,9 +925,9 @@
 			<img src="images-remake/null.png" alt="null"><br />		
 		</div>
 		<div class="text">
-			张家港 吾悦广场 2F 城市英雄 → <span class="dx">dx</span> 5币 | <span class="taiko">太鼓国行</span>*2 10币 <br />
+			张家港 吾悦广场 2F 城市英雄 → <span class="dx">dx</span> 5币 | <span class="taiko">太鼓国行</span> 10币 <br />
 		</div>
-  </div>
+	</div>
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
@@ -936,7 +937,7 @@
 		<div class="text">
 			张家港 万达广场 3F 星贝尼家庭娱乐中心 → <span class="dx">dx</span> 6币 <br />
 		</div>
-  </div>
+	</div>
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
@@ -946,7 +947,7 @@
 		<div class="text">
 			张家港 万达广场 2F 大玩家 → <span class="dx">dx</span> 4币 <br />
 		</div>
-  </div>
+	</div>
 </div>
 
 <!-- 更多区域... -->
