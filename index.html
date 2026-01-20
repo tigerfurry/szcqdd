@@ -151,7 +151,25 @@ body {
 	color: #73ff4d; /* 特殊文字颜色 */		
 }
 .item span.note {
-	color: #CA7384; /* 特殊文字颜色 */		
+	color: #e0aeb8; /* 特殊文字颜色 */		
+}
+.item span.fire {
+	color: #ff7171; /* 特殊文字颜色-火窝 */	
+}
+.item span.majiang {
+	color: #fdff8d; /* 特殊文字颜色-日麻 */	
+}
+.item span.zhuoyou {
+	color: #ffa149; /* 特殊文字颜色-桌游 */	
+}
+.item span.ns {
+	color: #a0ffd3; /* 特殊文字颜色-ns */	
+}
+.item span.detail {
+	display: block;
+	font-size: 0.8em;
+	/*color: #cafffc; */		
+	color: #e0aeb8; /* 特殊文字颜色 */		
 }
 .item span.station {
 	display: block;
@@ -204,7 +222,7 @@ body {
 
 <div class="header">
 	<h1>苏州出勤地点</h1>
-	<div class="update-date">2026-01-16</div>
+	<div class="update-date">2026-01-20</div>
 	<div class="header-note"></div>
 </div>
 
@@ -272,7 +290,7 @@ body {
 			<img src="images-remake/石路万象天地.png" alt=""><br />
 		</div>
 		<div class="text">		
-			姑苏区 石路 万象天地 3F C翻乐园 → <span class="dx">dx</span>*2 5币 | <span class="jubeat">jubeat</span>*2 <span class="note">进水待维修</span><br />
+			姑苏区 石路 万象天地 3F C翻乐园 → <span class="dx">dx</span>*2 5币 | <s><span class="jubeat">jubeat</span>*2</s> <span class="note">进水待维修</span><br />
 			<span class="station">【2号线 石路 站，1号口/2号口】</span>
 		</div>	
 	</div>	
@@ -285,12 +303,35 @@ body {
 	<div class="section-header"><h2>园区</h2></div><br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption"></div>
-			<img src="images-remake/null.png" alt=""><br />
+			<div class="qr-code-caption">苏州火窝</div>
+			<img src="images-remake/火窝staff.png" alt="火窝staff"><br />
 		</div>
-		<div class="text">	
-			园区 苏州中心 北区 6F 第一回合 → <span class="dx">dx</span> 会员/非会员 15/18币 | <span class="taiko">太鼓国行</span> 15/18 | <span class="chunithm">中二</span>*2 15/18 <br />
-			<span class="station">【1号线或3号线 东方之门 站，6号口】</span>
+		<div class="text">
+			园区 金鸡湖景区游客中心B1沃享空间 <span class="fire">苏州火窝音游</span> → <span class="dx">音游</span> | <span class="zhuoyou">桌游</span> | <span class="majiang">日麻</span> | <span class="ns">ns</span> <span class="comingsoon">即将开业</span><br />
+			<span class="detail">音游窝，24小时营业。基础价格 白天12/h，夜间15/h。添加staff邀请至群。请自备耳机、手套、aime卡。</span>
+			<span class="station">【1号线 国际博览中心 站，1号口 沿街商铺B17理发店对面】</span><br />
+		</div>
+	</div>
+	<br />
+	<div class="item">
+		<div class="qr-code.visible">
+			<div class="qr-code-caption">园区永旺</div>
+			<img src="images-remake/园区永旺梦乐城.png" alt="园区永旺梦乐城"><br />
+		</div>
+		<div class="text">
+			园区 永旺梦乐城 2F 真快活 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 10币 <br />
+			<span class="station">【1号线 钟南街 站，2号口】</span>
+		</div>
+	</div>
+	<br />
+	<div class="item">
+		<div class="qr-code.visible">
+			<div class="qr-code-caption">园区印象城</div>
+			<img src="images-remake/园区印象城.png" alt="园区印象城"><br />
+		</div>
+		<div class="text">
+			园区 印象城 3F 自游星空 → <span class="dx">dx</span> 5币 <br />
+			<span class="station">【1号线 中央公园 站，3号口，步行954m / 7号线 积翠桥 站，1号口，步行702m】</span>
 		</div>
 	</div>
 	<br />
@@ -316,25 +357,15 @@ body {
 	<br />
 	<div class="item">
 		<div class="qr-code.visible">
-			<div class="qr-code-caption">园区永旺</div>
-			<img src="images-remake/园区永旺梦乐城.png" alt="园区永旺梦乐城"><br />
+			<div class="qr-code-caption"></div>
+			<img src="images-remake/null.png" alt=""><br />
 		</div>
-		<div class="text">
-			园区 永旺梦乐城 2F 真快活 → <span class="dx">dx</span>*2 6币 | <span class="taiko">太鼓国行</span> 10币 <br />
-			<span class="station">【1号线 钟南街 站，2号口】</span>
+		<div class="text">	
+			园区 苏州中心 北区 6F 第一回合 → <span class="dx">dx</span> 会员/非会员 15/18币 | <span class="taiko">太鼓国行</span> 15/18 | <span class="chunithm">中二</span>*2 15/18 <br />
+			<span class="station">【1号线或3号线 东方之门 站，6号口】</span>
 		</div>
 	</div>
-	<br />
-	<div class="item">
-		<div class="qr-code.visible">
-			<div class="qr-code-caption">园区印象城</div>
-			<img src="images-remake/园区印象城.png" alt="园区印象城"><br />
-		</div>
-		<div class="text">
-			园区 印象城 3F 自游星空 → <span class="dx">dx</span> 5币 <br />
-			<span class="station">【1号线 中央公园 站，3号口，步行954m / 7号线 积翠桥 站，1号口，步行702m】</span>
-		</div>
-	</div>		
+			
 </div>
 
 
